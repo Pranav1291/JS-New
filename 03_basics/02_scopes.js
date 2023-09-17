@@ -42,4 +42,4 @@ const addTwo = function(num){         //-->> JS me variables bhto powerful hote 
 
     return num + 2                   //-->> is tarah se bhi hm fucntion declare kr skte hain 
 }
-addTwo(6)
+addTwo(6);
