@@ -27,7 +27,7 @@ function loginUserMessage (username){
         console.log("PLease enter a username")
         return
     }
-    return `${username} just logged in `
+    return (`${username} just logged in `)
 }            
 // console.log(loginUserMessage())
 
@@ -35,4 +35,25 @@ function loginUserMessage (username){
 function calculateCartPrice (...num1){   // -->>"..." ko spread operator bhi bolte h aur rest operator bhi bolte hain ,depends on use case
     return num1
 }
-console.log(calculateCartPrice(200, 400, 500));
+//console.log(calculateCartPrice(200, 400, 500));
+
+const user = {
+    username: "Pranav",
+    prices: "99"
+}
+function handleObject(anyobject){
+    console.log(`Username is ${anyobject.username} and price is ${anyobject.price}`);
+}
+//handleObject(user)
+handleObject({
+    username: "Sam",
+    price: "98"
+})
+
+
+const myNewArray = [200, 300, 400, 500]
+
+function returnSecondValue(getarray){
+    return getarray[3]
+}
+console.log(returnSecondValue(myNewArray));
