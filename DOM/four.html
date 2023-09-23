@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pranav Srivastava</title>
+</head>
+<body style = "background-color: #212121; color: #fff" >
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+    
+</body>
+<script>
+    function addLanguage(LangName) {
+        const li = document.createElement('li');
+        li.innerHTML = `${LangName}`
+        document.querySelector('.language').appendChild(li)
+
+
+    }
+    addLanguage("Python")
+    addLanguage("Typescript")
+
+    function addOptiLang(LangName){
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(LangName))  //-->>> ye thoda optimised solution hai!
+        document.querySelector('.language').appendChild(li)   
+    }
+    addOptiLang("Ruby On Rails")
+    addOptiLang("GoLang")
+
+    //Edit values
+    const secondLang = document.querySelector("li:nth-child(2)")
+    const newli = document.createElement('li')
+    newli.textContent = "Mojo"
+    secondLang.replaceWith(newli) //-->>mark
+
+    //edit
+    const firstLang = document.querySelector("li:first-child")
+    firstLang.outerHTML = '<li>Typescript</li>'
+
+    //remove value
+    const lastLang = document.querySelector("li:last-child")
+    lastLang.remove()
+</script>
+</html>
