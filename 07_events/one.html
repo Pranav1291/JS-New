@@ -18,4 +18,41 @@
         </ul>
    </div>
 </body>
+<script>
+    // document.getElementById('owl').onclick = function(){
+    //     alert("owl clicked")
+    // }
+    //note:-
+    //attachEvent()
+    //jQuery() - on
+    document.getElementById('images').addEventListener('click', function(e){
+        console.log("clicked inside the ul");
+        
+    }, false)//event propagation: false by default hota h but u can write it also
+    document.getElementById('owl').addEventListener('click', function(e){
+        console.log("owl clicked");
+        e.stopPropagation() //--> isse event propagate hoke upr ni jaega
+        
+    }, false) //-->> bubbling event propagation 'false' se hota hai, event perform krte hi top pe automatically chla jata h(means, bubbling ho jati hai) & vice-versa in 'true' propagation event
+    //what to study:- type, timestamp, defaultPrevented
+    //target, toElement, srcElement, currentTarget
+    //clientX, clientY, screenX, screenY
+    //altkey, ctrlkey, keyCode, etc..
+
+    // document.getElementById('google').addEventListener('click', function(e){
+       
+    //     e.preventDefault();
+    //     e.stopPropagation();
+    //     console.log("clicked on google");
+    // }, false)
+
+
+    document.querySelector('#images').addEventListener('click', function(e){
+        console.log(e.target.parentNode);
+        let removeIt = e.target.parentNode
+        removeIt.remove()
+    }, false)
+    
+
+</script>
 </html>
