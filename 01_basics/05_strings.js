@@ -14,7 +14,7 @@ console.log(gameName.substring(0, 6))
 console.log(gameName.includes('bound'));
 console.log(gameName.includes('nd'));
 console.log(gameName.split(' '));
-console.log(gameName.__proto__);
+console.log(gameName.__proto__); //-->>>here, the prototype is 'object'.
 console.log(gameName.slice(0, 6));
 console.log(gameName.trim(0, 6));
 console.log(gameName.concat('Pranav')); //appends
